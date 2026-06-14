@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukuva: Page not found</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/ukuva_mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ukuva.css">
+<style>
+  body { padding-top: 0; }
+  .nf { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-8); }
+  .nf__mark { width: 132px; margin-bottom: var(--space-8); }
+  .nf__code { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .2em; text-transform: uppercase; color: var(--ink-muted); }
+  .nf h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); margin: var(--space-4) 0 var(--space-3); }
+  .nf p { color: var(--ink-2); max-width: 44ch; margin-inline: auto; }
+  .nf__cta { display: flex; gap: var(--space-4); flex-wrap: wrap; justify-content: center; margin-top: var(--space-8); }
+</style>
+</head>
+<body>
+  <main class="nf">
+    <img class="nf__mark" src="assets/ukuva_mark.svg" alt="Ukuva">
+    <span class="nf__code">Error 404</span>
+    <h1>This page took a different path.</h1>
+    <p>The page you were after is not here. It may have moved, or the link was incomplete. Let's get you back on track.</p>
+    <div class="nf__cta">
+      <a class="btn btn--primary btn--lg" href="/">Back to home</a>
+      <a class="btn btn--outline btn--lg" href="/approach.html">See the approach</a>
+    </div>
+  </main>
+</body>
+</html>

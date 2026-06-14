@@ -27,21 +27,30 @@ Only `public/` is served. `design/` and `docs/` are version-controlled but exclu
 npx serve public        # or: python3 -m http.server -d public 8080
 ```
 
-## Deploy (Cloudflare Pages, Git-connected)
+## Deploy (Cloudflare Worker + Static Assets, Git-connected)
 
-The repo is connected to a Cloudflare Pages project. Every push to the production
-branch triggers an automatic build and deploy.
+The repo is connected to a Cloudflare **Worker** (Workers Static Assets) via Git
+builds. Every push to `main` runs `npx wrangler deploy`, which uploads `public/`
+and serves it directly. There is no Worker script: it is an assets-only Worker,
+configured in `wrangler.toml` (`[assets] directory = "./public"`).
 
-Cloudflare Pages project settings:
+Cloudflare build configuration (dashboard → Worker → Settings → Build):
 
 - **Build command:** _(none)_
-- **Build output directory:** `public`
+- **Deploy command:** `npx wrangler deploy`
 - **Root directory:** `/`
+- **Production branch:** `main`
 
 To deploy: commit and push. Cloudflare picks it up.
 
-Manual / one-off deploy from the CLI (optional):
+Validate the config locally without deploying:
 
 ```bash
-npx wrangler pages deploy public --project-name ukuva
+npx wrangler deploy --dry-run
+```
+
+Manual / one-off deploy from the CLI (needs `npx wrangler login`):
+
+```bash
+npx wrangler deploy
 ```

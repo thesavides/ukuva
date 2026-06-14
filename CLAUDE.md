@@ -22,5 +22,5 @@
 - Live site lives in `public/` (the only thing Cloudflare Pages serves): `public/index.html` (landing), `public/approach.html` (inner page with sticky sub-nav), shared `public/assets/ukuva.css` + `public/assets/ukuva.js`.
 - `design/`: design explorations, not deployed (`design-canvas.jsx`, `Ukuva - Hero Directions.html` 3-hero canvas, `heroes/`).
 - `docs/`: briefs + brand source PDFs, not deployed.
-- Hosting: Cloudflare Pages, Git-connected, build output dir `public` (see `wrangler.toml` + `README.md`). No build step.
+- Hosting: Cloudflare **Worker** with Static Assets (NOT Pages), Git-connected, deploy command `npx wrangler deploy`, assets dir `public` via `[assets]` in `wrangler.toml`. No build step, no Worker script. See `README.md`.
 - Use clean filenames and root-relative-ish links (`index.html`, `approach.html`); never reintroduce the old `Ukuva-Home.html` / `Ukuva-Approach.html` names.

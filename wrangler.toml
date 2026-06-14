@@ -1,6 +1,10 @@
 name = "ukuva"
 compatibility_date = "2026-06-14"
 
-# Cloudflare Pages: the production site is served from public/.
-# Everything outside public/ (design/, docs/) stays in the repo but is NOT deployed.
-pages_build_output_dir = "public"
+# Static site served by a Cloudflare Worker (Workers Static Assets).
+# The Git build runs `npx wrangler deploy`, which uploads everything in
+# public/ and serves it directly. No Worker script is needed.
+# Files outside public/ (design/, docs/) are NOT uploaded.
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
