@@ -110,8 +110,10 @@ strong { font-weight: 600; }
 .eyebrow--plain::before { display: none; }
 .eyebrow--accent { color: var(--accent); }
 .band-deep .eyebrow { color: var(--on-deep-muted); }
-/* Section eyebrows that directly label a sub-header (h2) are hidden */
-.eyebrow:has(+ h2) { display: none; }
+/* Section eyebrows (labelling an h2) show, but without the leading dash */
+.eyebrow:has(+ h2)::before { display: none; }
+/* Visually hidden, still available to screen readers / SEO */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Serif accent */
 .serif { font-family: var(--font-serif); }
