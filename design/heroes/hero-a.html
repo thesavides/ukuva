@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukuva: Hero A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500;1,6..72,600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/assets/ukuva.css">
+<style>
+  body { padding-top: 0; }
+  .hero-a { min-height: 860px; display: flex; flex-direction: column; padding-top: calc(var(--header-h) + var(--space-6)); padding-bottom: var(--space-10); }
+  .hero-a__main { flex: 1; display: grid; grid-template-columns: 1.12fr 0.88fr; align-items: center; gap: var(--space-12); }
+  .hero-a h1 { margin: var(--space-6) 0 var(--space-6); }
+  .hero-a .lead { max-width: 40ch; }
+  .hero-a__cta { display: flex; gap: var(--space-4); margin-top: var(--space-8); flex-wrap: wrap; }
+  .hero-a__meta { margin-top: var(--space-10); display: flex; gap: var(--space-5); flex-wrap: wrap; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .08em; color: var(--ink-muted); text-transform: uppercase; }
+  .hero-a__meta .dot { color: var(--accent); }
+  .hero-a__visual { position: relative; height: 560px; display: flex; align-items: center; justify-content: center; }
+  .hero-a__ring { position: absolute; width: 520px; height: 520px; border-radius: 50%; border: 1px solid var(--border); }
+  .hero-a__ring.r2 { width: 380px; height: 380px; border-color: var(--blue-soft); }
+  .hero-a__mark { position: relative; width: 300px; z-index: 2; }
+  .hero-a__tag { position: absolute; bottom: 24px; right: 0; text-align: right; }
+  .hero-a__tag .t { font-family: var(--font-serif); font-style: italic; font-size: 1.9rem; color: var(--ink); line-height: 1.1; }
+  .hero-a__tag .x { color: var(--accent); }
+  .hero-a__topline { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-6); }
+</style>
+</head>
+<body>
+<!-- header -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#"><img src="../../public/assets/ukuva_wordmark.svg" alt="Ukuva"></a>
+    <nav class="nav">
+      <div class="nav__links">
+        <span class="nav__item"><a class="nav__link" href="#">Approach</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">How it works</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Case studies</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Why Ukuva</a></span>
+      </div>
+      <div class="nav__utils">
+        <a class="lang" href="#">EN</a>
+        <a class="btn btn--primary btn--sm" href="#">Book a call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-a wrap">
+  <div class="hero-a__topline">
+    <span class="eyebrow">Personal executive activation</span>
+    <span class="eyebrow eyebrow--plain">Amsterdam · Worldwide</span>
+  </div>
+  <div class="hero-a__main">
+    <div>
+      <span class="eyebrow eyebrow--accent" style="margin-bottom:0;">Listen. Then do.</span>
+      <h1>You have the idea.<br>I&rsquo;ll make it real.</h1>
+      <p class="lead">A personal executive service for ambitious people with a vision and no spare bandwidth. I listen properly, return with a plan, then go out and do the work on your behalf.</p>
+      <div class="hero-a__cta">
+        <a class="btn btn--primary btn--lg" href="#">Book the free 30-min call</a>
+        <a class="btn btn--ghost btn--lg" href="#">See how it works <span class="arr">&darr;</span></a>
+      </div>
+      <div class="hero-a__meta">
+        <span>Remote-first</span><span class="dot">&bull;</span>
+        <span>20 years operating</span><span class="dot">&bull;</span>
+        <span>Max 3 clients at a time</span>
+      </div>
+    </div>
+    <div class="hero-a__visual">
+      <div class="hero-a__ring"></div>
+      <div class="hero-a__ring r2"></div>
+      <img class="hero-a__mark" src="../../public/assets/ukuva_mark.svg" alt="">
+      <div class="hero-a__tag"><span class="t">Not a consultant.<br>An <span class="x">operator</span>.</span></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

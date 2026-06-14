@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.thumbnail
+design/.thumbnail
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+
+# Cloudflare / Wrangler
+.wrangler/
+.dev.vars
+
+# Editor
+.idea/
+.vscode/
+*.swp

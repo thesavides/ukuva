@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukuva: Hero C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500;1,6..72,600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/assets/ukuva.css">
+<style>
+  body { padding-top: 0; background: var(--bg-deep); }
+  .site-header { background: rgba(14,27,38,0.6); border-bottom-color: rgba(255,255,255,.08); }
+  .site-header .nav__link { color: var(--on-deep-muted); }
+  .site-header .nav__link:hover { color: #fff; background: rgba(255,255,255,.06); }
+  .site-header .lang { color: var(--on-deep-muted); }
+  .hero-c { min-height: 860px; display: flex; flex-direction: column; justify-content: center; padding-top: var(--header-h); position: relative; overflow: hidden; }
+  .hero-c__mark { position: absolute; right: -130px; top: 50%; transform: translateY(-50%); width: 620px; opacity: .07; z-index: 0; }
+  .hero-c__inner { position: relative; z-index: 2; }
+  .hero-c .def { display: flex; align-items: baseline; gap: var(--space-5); flex-wrap: wrap; margin-bottom: var(--space-8); }
+  .hero-c .def .word { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; color: #fff; }
+  .hero-c .def .ipa { font-family: var(--font-mono); font-size: var(--text-base); color: var(--on-deep-muted); letter-spacing: .02em; }
+  .hero-c .def .pos { font-family: var(--font-serif); font-style: italic; font-size: var(--text-xl); color: var(--accent); }
+  .hero-c .def .mean { font-family: var(--font-serif); font-style: italic; font-size: var(--text-xl); color: var(--on-deep); }
+  .hero-c h1 { color: #fff; font-size: clamp(3.4rem, 9vw, 7.6rem); line-height: 0.98; margin-bottom: var(--space-8); }
+  .hero-c h1 .then { color: var(--accent); }
+  .hero-c .lead { color: var(--on-deep); max-width: 46ch; font-size: clamp(1.2rem, 2vw, 1.45rem); }
+  .hero-c__cta { display: flex; gap: var(--space-4); margin-top: var(--space-10); flex-wrap: wrap; align-items: center; }
+  .hero-c__rule { height: 1px; background: rgba(255,255,255,.12); margin-bottom: var(--space-10); }
+  .hero-c__meta { position: absolute; left: var(--gutter); right: var(--gutter); bottom: var(--space-10); display: flex; justify-content: space-between; gap: var(--space-6); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--on-deep-muted); z-index: 2; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#"><img src="../../public/assets/ukuva_wordmark_white.svg" alt="Ukuva"></a>
+    <nav class="nav">
+      <div class="nav__links">
+        <span class="nav__item"><a class="nav__link" href="#">Approach</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">How it works</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Case studies</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Why Ukuva</a></span>
+      </div>
+      <div class="nav__utils">
+        <a class="lang" href="#">EN</a>
+        <a class="btn btn--primary btn--sm" href="#">Book a call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-c">
+  <img class="hero-c__mark" src="../../public/assets/ukuva_mark.svg" alt="">
+  <div class="hero-c__inner wrap">
+    <div class="hero-c__rule"></div>
+    <div class="def">
+      <span class="word">ukuva</span>
+      <span class="ipa">/uku&middot;va/</span>
+      <span class="pos">verb &middot;&nbsp;isiXhosa</span>
+      <span class="mean">&lsquo;to listen&rsquo;</span>
+    </div>
+    <h1>Listen.<br><span class="then">Then do.</span></h1>
+    <p class="lead">Listening is where it starts, but listening without doing is just noise. You have the idea. I go out into the world and make it real.</p>
+    <div class="hero-c__cta">
+      <a class="btn btn--primary btn--lg" href="#">Book the free 30-min call</a>
+      <a class="btn btn--outline btn--lg" href="#">How it works</a>
+    </div>
+  </div>
+  <div class="hero-c__meta">
+    <span>Personal executive activation</span>
+    <span>Amsterdam &bull; Worldwide on engagement</span>
+    <span>Max 3 clients at a time</span>
+  </div>
+</section>
+</body>
+</html>

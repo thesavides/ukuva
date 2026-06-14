@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukuva: Hero B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500;1,6..72,600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../public/assets/ukuva.css">
+<script src="../../public/assets/image-slot.js"></script>
+<style>
+  body { padding-top: 0; }
+  .hero-b { min-height: 860px; display: grid; grid-template-columns: 1.04fr 0.96fr; }
+  .hero-b__text { padding: calc(var(--header-h) + var(--space-12)) var(--space-16) var(--space-12) 0; display: flex; flex-direction: column; justify-content: center; }
+  .hero-b__text .inner { max-width: 30rem; margin-left: auto; }
+  .hero-b h1 { margin: var(--space-6) 0; font-size: clamp(2.4rem, 4.6vw, 4.1rem); }
+  .hero-b h1 .em { font-family: var(--font-serif); font-style: italic; font-weight: 500; letter-spacing: -0.01em; color: var(--accent); }
+  .hero-b .lead { max-width: 34ch; }
+  .hero-b__cta { display: flex; gap: var(--space-4); margin-top: var(--space-8); flex-wrap: wrap; align-items: center; }
+  .hero-b__visual { position: relative; background: var(--bg-deep); overflow: hidden; }
+  .hero-b__visual image-slot { position: absolute; inset: 0; }
+  .hero-b__cap { position: absolute; left: var(--space-8); bottom: var(--space-8); z-index: 3; color: #fff; }
+  .hero-b__cap .n { font-size: var(--text-xl); font-weight: 700; letter-spacing: -0.02em; }
+  .hero-b__cap .r { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--on-deep-muted); margin-top: 4px; }
+  .hero-b__stat { position: absolute; top: calc(var(--header-h) + var(--space-8)); right: var(--space-8); z-index: 3; background: var(--accent); color: #fff; padding: var(--space-4) var(--space-5); border-radius: var(--radius-md); }
+  .hero-b__stat b { display: block; font-size: 2rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+  .hero-b__stat span { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: .12em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#"><img src="../../public/assets/ukuva_wordmark.svg" alt="Ukuva"></a>
+    <nav class="nav">
+      <div class="nav__links">
+        <span class="nav__item"><a class="nav__link" href="#">Approach</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">How it works</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Case studies</a></span>
+        <span class="nav__item"><a class="nav__link" href="#">Why Ukuva</a></span>
+      </div>
+      <div class="nav__utils">
+        <a class="lang" href="#">EN</a>
+        <a class="btn btn--primary btn--sm" href="#">Book a call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-b">
+  <div class="hero-b__text wrap" style="max-width:none;">
+    <div class="inner">
+      <span class="eyebrow eyebrow--accent">Listen. Then do.</span>
+      <h1>You bring the vision.<br>I bring <span class="em">twenty years</span> of getting it done.</h1>
+      <p class="lead">Not a consultant who hands you a report. Not a cofounder who wants equity. A senior operator who immerses, plans, and executes on your behalf.</p>
+      <div class="hero-b__cta">
+        <a class="btn btn--primary btn--lg" href="#">Book the free 30-min call</a>
+        <a class="tlink" href="#">Read the case studies <span class="arr">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-b__visual">
+    <image-slot id="hero-chris" shape="rect" fit="cover" placeholder="Drop a real photo of Chris"></image-slot>
+    <div class="hero-b__stat"><b>3</b><span>clients max</span></div>
+    <div class="hero-b__cap">
+      <div class="n">Christopher Savides</div>
+      <div class="r">Founder · Amsterdam</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ukuva: The Approach</title>
+<meta name="description" content="How Ukuva works: the three-phase activation model, engagement principles, and the Operational Readiness Blueprint.">
+<link rel="icon" href="assets/ukuva_mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500;1,6..72,600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/ukuva.css">
+<style>
+  /* ---- INNER PAGE HERO ---- */
+  .page-hero { padding-top: calc(var(--header-h) + var(--space-12)); padding-bottom: var(--space-12); }
+  .page-hero__rule { height: 2px; width: 56px; background: var(--accent); margin-bottom: var(--space-8); }
+  .page-hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); max-width: 16ch; }
+  .page-hero .lead { max-width: 52ch; margin-top: var(--space-6); }
+
+  section[id] { scroll-margin-top: 132px; }
+
+  .approach-block { padding-block: clamp(3.5rem, 7vw, 6rem); }
+  .block-head { max-width: 60ch; margin-bottom: var(--space-10); }
+  .block-head h2 { margin-top: var(--space-3); }
+
+  .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+  .phase__num { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .18em; color: var(--accent); text-transform: uppercase; }
+  .phase__price { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--ink); padding: 0.3rem 0.6rem; background: var(--bg-panel); border-radius: 999px; align-self: flex-start; white-space: nowrap; }
+
+  .principles { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+  .principle { padding: var(--space-8); border: 1px solid var(--border-soft); border-radius: var(--radius-lg); background: var(--surface); }
+  .principle__k { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .principle h3 { font-size: var(--text-xl); margin: var(--space-4) 0 var(--space-3); }
+  .principle p { color: var(--ink-2); }
+
+  .blueprint-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: var(--space-16); align-items: center; }
+  .blueprint-card { background: var(--bg-deep); color: var(--on-deep); border-radius: var(--radius-lg); padding: var(--space-10); }
+  .blueprint-card h3 { color: #fff; font-size: var(--text-2xl); }
+  .blueprint-card .doc { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-8); }
+  .blueprint-card .doc-row { display: grid; grid-template-columns: auto 1fr; gap: var(--space-4); align-items: baseline; padding-bottom: var(--space-4); border-bottom: 1px solid rgba(255,255,255,.1); }
+  .blueprint-card .doc-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .blueprint-card .doc-n { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent); }
+  .blueprint-card .doc-t { color: #fff; font-weight: 600; }
+  .blueprint-card .doc-d { font-size: var(--text-sm); color: var(--on-deep-muted); display: block; margin-top: 2px; }
+
+  .faq-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: var(--space-12); align-items: start; }
+  .faq-grid .faq { width: 100%; }
+
+  .cta-strip { background: var(--bg-panel); border-radius: var(--radius-lg); padding: clamp(2.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); flex-wrap: wrap; }
+  .cta-strip h2 { font-size: clamp(1.8rem, 3.4vw, var(--text-3xl)); max-width: 18ch; }
+
+  @media (max-width: 900px) {
+    .phases, .principles { grid-template-columns: 1fr; }
+    .blueprint-grid, .faq-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="index.html" aria-label="Ukuva home"><img src="assets/ukuva_wordmark.svg" alt="Ukuva"></a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links">
+        <span class="nav__item">
+          <a class="nav__link" href="approach.html">Approach <svg class="caret" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4"/></svg></a>
+          <div class="dropdown">
+            <a href="#overview"><span class="dd-t">Overview</span><span class="dd-d">What activation means</span></a>
+            <a href="#how"><span class="dd-t">How it works</span><span class="dd-d">The three-phase model</span></a>
+            <a href="#principles"><span class="dd-t">Engagement principles</span><span class="dd-d">Three clients. No equity.</span></a>
+            <a href="#blueprint"><span class="dd-t">The Blueprint</span><span class="dd-d">The plan that serves execution</span></a>
+            <a href="#execution"><span class="dd-t">Execution</span><span class="dd-d">The point: I go and do it</span></a>
+          </div>
+        </span>
+        <span class="nav__item"><a class="nav__link" href="index.html#cases">Case studies</a></span>
+        <span class="nav__item"><a class="nav__link" href="index.html#why">Why Ukuva</a></span>
+      </div>
+      <div class="nav__utils">
+        <a class="lang" href="#" aria-label="Language">EN</a>
+        <a class="btn btn--primary btn--sm" href="index.html#contact">Book a call</a>
+      </div>
+    </nav>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- mobile nav -->
+<div class="mobile-nav" aria-label="Mobile menu">
+  <button class="mobile-nav__close" aria-label="Close">&times;</button>
+  <a href="#overview">Overview</a>
+  <a href="#how">How it works</a>
+  <a href="#principles">Engagement principles</a>
+  <a href="#blueprint">The Blueprint</a>
+  <a href="#execution">Execution</a>
+  <a href="#faq">FAQ</a>
+  <a href="index.html#cases">Case studies</a>
+  <a class="btn btn--primary btn--lg" href="index.html#contact">Book the free call</a>
+</div>
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero wrap">
+  <div class="page-hero__rule"></div>
+  <span class="eyebrow eyebrow--plain" style="margin-bottom:var(--space-5);">Approach</span>
+  <h1>Activation, not advice.</h1>
+  <p class="lead">Most engagements end with a document and a handshake. This one ends with the thing actually built. Here is exactly how it works: the model, the principles, and what you walk away owning.</p>
+</section>
+
+<!-- ===================== STICKY SUB-NAV ===================== -->
+<nav class="sub-nav sub-nav--top" aria-label="Approach sections">
+  <div class="sub-nav__inner">
+    <a href="#overview" class="is-current">Overview</a>
+    <a href="#how">How it works</a>
+    <a href="#principles">Engagement principles</a>
+    <a href="#blueprint">The Blueprint</a>
+    <a href="#execution">Execution</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- ===================== OVERVIEW ===================== -->
+<section id="overview" class="approach-block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">Overview</span>
+      <h2>The name is the method.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;">
+      <div>
+        <p class="lead" style="margin-bottom:var(--space-6);">In isiXhosa, <strong>ukuva</strong> means <em class="serif-italic">to listen</em>. That is where every engagement starts: listening properly, understanding completely.</p>
+        <p class="muted" style="font-size:var(--text-lg);">Listening without doing, though, is just noise. The full offer is the second half of the word in practice: going out into the world and doing the work. You bring the vision and the resources. I bring the seniority, the network, and the hustle to make it real, then step away when it&rsquo;s done.</p>
+      </div>
+      <div>
+        <p class="pull-quote">Listen properly. Then go and <em>do the work</em>, with real accountability for whether it ships.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:var(--space-16);padding-top:var(--space-12);border-top:1px solid var(--border-soft);">
+      <span class="eyebrow eyebrow--plain">Built for</span>
+      <div class="grid grid-3" style="margin-top:var(--space-6);">
+        <ul class="feature-list">
+          <li>A founder running one business with a second idea they can&rsquo;t get to.</li>
+          <li>Someone entering a new market who needs the operational groundwork done.</li>
+        </ul>
+        <ul class="feature-list">
+          <li>An executive who wants to launch something on the side but has no time.</li>
+          <li>A professional with intellectual property they&rsquo;ve never commercialised.</li>
+        </ul>
+        <ul class="feature-list">
+          <li>Anyone who&rsquo;s tried to delegate before and been let down.</li>
+          <li>A business owner with a plan who just needs someone to go execute it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section id="how" class="approach-block band">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Three phases, building to one thing: <span style="color:var(--accent);">execution</span>.</h2>
+    </div>
+
+    <div class="phases">
+      <article class="card phase phase--accent">
+        <div class="phase__num">Phase 01 · Listen</div>
+        <span class="phase__price">No charge</span>
+        <h3>Free discovery call</h3>
+        <p class="muted">Thirty minutes. You share the idea or the challenge. I ask the right questions. We decide together, honestly, whether it&rsquo;s worth pursuing. No pitch, no obligation.</p>
+      </article>
+      <article class="card phase phase--accent">
+        <div class="phase__num">Phase 02 · Plan</div>
+        <span class="phase__price">From &euro;5,000 · once-off</span>
+        <h3>Operational readiness</h3>
+        <p class="muted">A fixed, once-off engagement fee that can involve travelling to you directly or further video consults. I immerse myself in your world and produce the Operational Readiness Blueprint: the plan that makes execution possible. Non-refundable.</p>
+      </article>
+      <article class="card phase phase--feature">
+        <div class="phase__num">Phase 03 · The point</div>
+        <span class="phase__price">Quoted per engagement</span>
+        <h3>I go and do it</h3>
+        <p>This is the work, and the reason the rest exists. I take the plan and execute it on your behalf, using my network and experience to make the idea real. You could run it yourself, but doing it is the offer. Fixed fee, project-based, or hourly.</p>
+      </article>
+    </div>
+
+    <div style="margin-top:var(--space-16);">
+      <span class="eyebrow eyebrow--plain">Where this sits versus the alternatives</span>
+      <div class="cmp-wrap" style="margin-top:var(--space-6);">
+        <table class="cmp">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="is-ukuva">Ukuva</th>
+              <th scope="col">Consultant</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Virtual assistant</th>
+              <th scope="col">Cofounder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Does the actual work</th>
+              <td class="col-ukuva"><span class="yes">Yes</span></td>
+              <td class="no">Hands you a report</td>
+              <td>With heavy steering</td>
+              <td>Within narrow limits</td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Delivery accountability</th>
+              <td class="col-ukuva"><span class="yes">Yes</span></td>
+              <td class="no">None after handover</td>
+              <td>Shared, diffuse</td>
+              <td class="no">Limited</td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Senior enough to act alone</th>
+              <td class="col-ukuva"><span class="yes">Yes</span></td>
+              <td>Advises only</td>
+              <td class="no">Needs direction</td>
+              <td class="no">No</td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">No equity or control given up</th>
+              <td class="col-ukuva"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td class="no">Wants a piece</td>
+            </tr>
+            <tr>
+              <th scope="row">Ends cleanly, no dependency</th>
+              <td class="col-ukuva"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td class="no">Ongoing retainer</td>
+              <td class="no">Ongoing</td>
+              <td class="no">Long-term</td>
+            </tr>
+            <tr>
+              <th scope="row">You keep the plan</th>
+              <td class="col-ukuva"><span class="yes">Yes, outright</span></td>
+              <td>Sometimes</td>
+              <td>Locked to them</td>
+              <td class="no">N/A</td>
+              <td class="no">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRINCIPLES ===================== -->
+<section id="principles" class="approach-block">
+  <div class="wrap">
+    <div class="block-head">
+      <span class="eyebrow">Engagement principles</span>
+      <h2>The rules that keep this honest.</h2>
+    </div>
+    <div class="principles">
+      <div class="principle">
+        <span class="principle__k">01 · Focus</span>
+        <h3>Maximum three clients at a time</h3>
+        <p>Quality of execution matters more than volume. Ukuva never runs more than three active engagements simultaneously, so every client gets full focus and genuine delivery accountability.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__k">02 · Clarity</span>
+        <h3>Not a cofounder. Not a consultant.</h3>
+        <p>No partnership, no equity, no shared control. You have a vision; I execute on your behalf. When the mission is done, the engagement ends, and no dependency is created.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__k">03 · Ownership</span>
+        <h3>The Blueprint is yours to keep</h3>
+        <p>The Operational Readiness Blueprint belongs entirely to you. It&rsquo;s non-refundable because the research and expertise behind it are real. Execute it independently, or bring me back to deliver it.</p>
+      </div>
+      <div class="principle">
+        <span class="principle__k">04 · Transparency</span>
+        <h3>Travel on engagement terms</h3>
+        <p>Base of operations is Amsterdam; most work is remote. Where on-site presence is required, travel and accommodation are invoiced separately and transparently. Nothing hidden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THE BLUEPRINT ===================== -->
+<section id="blueprint" class="approach-block band">
+  <div class="wrap">
+    <div class="blueprint-grid">
+      <div>
+        <span class="eyebrow">The Blueprint</span>
+        <h2 style="margin-top:var(--space-3);">The plan exists to be executed.</h2>
+        <p class="lead" style="margin-top:var(--space-6);">The output of Phase&nbsp;2 is a single, practical document: the Operational Readiness Blueprint. Not a strategy deck, but an execution plan, built to be acted on in Phase&nbsp;3.</p>
+        <ul class="feature-list" style="margin-top:var(--space-8);">
+          <li><strong>Built for doing, not filing.</strong> Every line is something to act on, sequenced and costed.</li>
+          <li><strong>Yours, outright.</strong> Run it yourself or hand it back to me to deliver. Most clients want it done.</li>
+          <li><strong>Honest about cost and risk.</strong> No optimism inflation. Real numbers, real failure modes.</li>
+        </ul>
+      </div>
+      <div class="blueprint-card">
+        <h3>Inside the Blueprint</h3>
+        <div class="doc">
+          <div class="doc-row"><span class="doc-n">01</span><span><span class="doc-t">The objective, stated plainly</span><span class="doc-d">What &ldquo;done&rdquo; looks like, and how we&rsquo;ll know.</span></span></div>
+          <div class="doc-row"><span class="doc-n">02</span><span><span class="doc-t">The operational map</span><span class="doc-d">Every function that has to exist, and what&rsquo;s missing today.</span></span></div>
+          <div class="doc-row"><span class="doc-n">03</span><span><span class="doc-t">Sequence &amp; dependencies</span><span class="doc-d">The order of operations: what unblocks what.</span></span></div>
+          <div class="doc-row"><span class="doc-n">04</span><span><span class="doc-t">Cost, time &amp; risk</span><span class="doc-d">Transparent estimates and the honest failure modes.</span></span></div>
+          <div class="doc-row"><span class="doc-n">05</span><span><span class="doc-t">The network to call on</span><span class="doc-d">The specific people and partners who can move it fast.</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXECUTION (the point) ===================== -->
+<section id="execution" class="approach-block band-deep">
+  <div class="wrap">
+    <div class="blueprint-grid">
+      <div>
+        <span class="eyebrow">Phase 03 · the point</span>
+        <h2 style="color:#fff;margin-top:var(--space-3);">Then I go and do it.</h2>
+        <p class="lead" style="color:var(--on-deep);margin-top:var(--space-6);">Everything else is preparation. Execution is the work you actually came for: I take the plan into the real world and deliver it on your behalf, with my name on whether it ships.</p>
+        <a class="btn btn--primary btn--lg" href="index.html#contact" style="margin-top:var(--space-8);">Start with the free call &rarr;</a>
+      </div>
+      <ul class="feature-list" style="margin-top:var(--space-2);">
+        <li style="color:var(--on-deep);"><strong style="color:#fff;">I do the work, not direct it.</strong> Senior enough to make the calls and move without being managed.</li>
+        <li style="color:var(--on-deep);"><strong style="color:#fff;">Flexible terms.</strong> Fixed-fee, project-based or hourly, whatever fits the mission.</li>
+        <li style="color:var(--on-deep);"><strong style="color:#fff;">Real accountability.</strong> Delivery is on the line until the thing is built and running.</li>
+        <li style="color:var(--on-deep);"><strong style="color:#fff;">Then it ends.</strong> Mission done, engagement over. No dependency, no retainer creep.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="approach-block">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="block-head" style="margin-bottom:0;">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:var(--space-3);">Straight answers.</h2>
+      </div>
+      <div class="faq">
+        <div class="faq__item open">
+          <button class="faq__q" aria-expanded="true">Is this consulting? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">No. Consultants produce documents and move on, with no accountability for whether anything ships. Ukuva is the opposite: I do the work, on your behalf, with real delivery on the line.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">What does the Blueprint cost, and why is it non-refundable? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">From &euro;5,000, fixed. It&rsquo;s non-refundable because the time, travel, research and expertise that go into it are genuine work, not a sales document. You own the result outright either way.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">Do you take equity? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">Never. There is no equity, no shared control, and no long-term commitment. You keep full ownership of your business. When the mission is done, the engagement ends.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">How many clients do you take on? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">A maximum of three active clients at any time. This isn&rsquo;t manufactured scarcity. It&rsquo;s how I guarantee every engagement gets genuine focus and follow-through.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">Where are you based, and will you travel? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">Amsterdam. Most work is done remotely, but where on-site presence matters I&rsquo;ll travel to you, wherever you are. Travel and accommodation are invoiced separately and transparently.</div></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">What happens after the Blueprint? <span class="pm" aria-hidden="true"></span></button>
+          <div class="faq__a"><div class="faq__a-inner">Your call. Keep it and execute independently, or engage me to deliver it: fixed fee, project-based, or hourly. There&rsquo;s no pressure either way; the Blueprint stands on its own.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA STRIP ===================== -->
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta-strip">
+      <h2>Worth a 30-minute conversation?</h2>
+      <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;">
+        <a class="btn btn--primary btn--lg" href="index.html#contact">Book the free call &rarr;</a>
+        <a class="btn btn--outline btn--lg" href="index.html">Back to overview</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/ukuva_wordmark_white.svg" alt="Ukuva">
+        <p>A personal executive service. You have the idea. I make it real. Listen. Then do.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Approach</h4>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#blueprint">The Blueprint</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Engage</h4>
+        <ul>
+          <li><a href="index.html#contact">Book a call</a></li>
+          <li><a href="mailto:chris@ukuva.com">chris@ukuva.com</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="legal">© 2026 Ukuva, Netherlands BV · Amsterdam</span>
+      <div class="footer__social">
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:chris@ukuva.com">Email</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/ukuva.js"></script>
+</body>
+</html>
