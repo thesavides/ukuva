@@ -1,0 +1,18 @@
+; ukuva.com DNS import for Cloudflare (DNS > Records > Import)
+; Google Workspace mail + domain verification + DMARC.
+;
+; NOTE 1: Add DKIM separately (not here) - it is too long/secret to hardcode.
+;         TXT  google._domainkey  = full value from
+;         Google Admin > Apps > Google Workspace > Gmail > Authenticate email.
+; NOTE 2: The old "MS=..." Microsoft 365 verification is intentionally omitted (stale).
+; NOTE 3: After import, leave all of these DNS only (grey cloud).
+
+ukuva.com.              3600 IN MX 1  aspmx.l.google.com.
+ukuva.com.              3600 IN MX 5  alt1.aspmx.l.google.com.
+ukuva.com.              3600 IN MX 5  alt2.aspmx.l.google.com.
+ukuva.com.              3600 IN MX 10 alt3.aspmx.l.google.com.
+ukuva.com.              3600 IN MX 10 alt4.aspmx.l.google.com.
+ukuva.com.              3600 IN TXT "v=spf1 include:_spf.google.com ~all"
+7zqatk66dpqc.ukuva.com. 3600 IN CNAME gv-74wfcknqfntf3h.dv.googlehosted.com.
+bcxs3qmvaykr.ukuva.com. 3600 IN CNAME gv-iorplwj35ctwqn.dv.googlehosted.com.
+_dmarc.ukuva.com.       3600 IN TXT "v=DMARC1; p=none; rua=mailto:chris@ukuva.com"
