@@ -15,8 +15,8 @@
   </g>
 
   <!-- headline, left-aligned, two lines -->
-  <text x="80" y="400" font-family="'Schibsted Grotesk',system-ui,-apple-system,Arial,sans-serif" font-weight="800" font-size="82" letter-spacing="-2" fill="#14222C">You have the idea.</text>
-  <text x="80" y="492" font-family="'Schibsted Grotesk',system-ui,-apple-system,Arial,sans-serif" font-weight="800" font-size="82" letter-spacing="-2" fill="#14222C">I&#8217;ll make it real.</text>
+  <text x="80" y="400" font-family="'Schibsted Grotesk',system-ui,-apple-system,Arial,sans-serif" font-weight="800" font-size="82" letter-spacing="-2" fill="#14222C">You have the <tspan fill="#FF5C1E">idea</tspan>.</text>
+  <text x="80" y="492" font-family="'Schibsted Grotesk',system-ui,-apple-system,Arial,sans-serif" font-weight="800" font-size="82" letter-spacing="-2" fill="#14222C">I&#8217;ll make it <tspan fill="#FF5C1E">real</tspan>.</text>
 
   <!-- tagline + contact -->
   <text x="82" y="562" font-family="'IBM Plex Mono','SF Mono',ui-monospace,monospace" font-size="23" font-weight="500" letter-spacing="4" fill="#FF5C1E">LISTEN. THEN DO.</text>
