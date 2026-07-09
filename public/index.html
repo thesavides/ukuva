@@ -19,7 +19,7 @@
 <link rel="icon" href="assets/ukuva_mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500;1,6..72,600&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/ukuva.css?v=2">
 <script src="assets/image-slot.js?v=2"></script>
 <script type="application/ld+json">
@@ -66,16 +66,39 @@
   .hero__ring.r2 { width: 320px; height: 320px; border-color: var(--blue-soft); }
   .hero__mark { position: relative; width: 240px; z-index: 2; }
   .hero__tag { position: absolute; bottom: 6px; right: 0; text-align: right; }
-  .hero__tag .t { font-family: var(--font-serif); font-style: italic; font-size: 1.7rem; line-height: 1.15; color: var(--ink); }
+  .hero__tag .t { font-family: var(--font-sans); font-weight: 600; font-size: 1.5rem; line-height: 1.15; color: var(--ink); }
   .hero__tag .x { color: var(--accent); }
 
   /* ---- PROBLEM ---- */
   .prob__head { max-width: 26ch; }
-  .fails { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); margin-top: var(--space-12); }
-  .fail { padding: var(--space-6); border: 1px solid var(--border-soft); border-radius: var(--radius-md); background: var(--surface); }
-  .fail__x { font-family: var(--font-mono); color: var(--ink-muted); font-size: var(--text-sm); margin-bottom: var(--space-4); }
-  .fail h4 { font-size: var(--text-lg); margin-bottom: var(--space-2); }
-  .fail p { font-size: var(--text-sm); color: var(--ink-muted); }
+  .notfit { margin-top: var(--space-12); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); padding: var(--space-8) var(--space-8) var(--space-10); }
+  .notfit__head { font-size: var(--text-lg); font-weight: 700; color: var(--ink); margin-bottom: var(--space-8); }
+  .notfit__grid { display: grid; }
+  .notfit__tag { display: flex; align-items: center; gap: var(--space-2); font-family: var(--font-mono); font-size: var(--text-sm); color: var(--ink-muted); margin-bottom: var(--space-4); }
+  .notfit__x { color: var(--accent); font-weight: 700; }
+  .notfit__item h4 { font-size: var(--text-lg); font-weight: 700; color: var(--ink-2); margin-bottom: var(--space-2); }
+  .notfit__item p { font-size: var(--text-sm); color: var(--ink-muted); }
+  /* 4 across: thin vertical dividers between items */
+  @media (min-width: 861px) {
+    .notfit__grid { grid-template-columns: repeat(4, 1fr); }
+    .notfit__item { padding-inline: var(--space-6); border-left: 1px solid var(--border-soft); }
+    .notfit__item:first-child { border-left: 0; padding-left: 0; }
+    .notfit__item:last-child { padding-right: 0; }
+  }
+  /* 2 across: vertical dividers between columns, horizontal between rows */
+  @media (min-width: 561px) and (max-width: 860px) {
+    .notfit__grid { grid-template-columns: 1fr 1fr; }
+    .notfit__item { padding: 0 var(--space-6); }
+    .notfit__item:nth-child(odd) { padding-left: 0; }
+    .notfit__item:nth-child(even) { padding-right: 0; border-left: 1px solid var(--border-soft); }
+    .notfit__item:nth-child(-n+2) { padding-bottom: var(--space-6); }
+    .notfit__item:nth-child(n+3) { padding-top: var(--space-6); border-top: 1px solid var(--border-soft); }
+  }
+  /* 1 across: horizontal dividers */
+  @media (max-width: 560px) {
+    .notfit__grid { grid-template-columns: 1fr; }
+    .notfit__item + .notfit__item { margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--border-soft); }
+  }
   .prob__quote { margin-top: var(--space-16); padding-top: var(--space-12); border-top: 1px solid var(--border-soft); }
 
   /* ---- STEPS ---- */
@@ -150,11 +173,11 @@
     .faq-grid { grid-template-columns: 1fr; gap: var(--space-8); }
   }
   @media (max-width: 860px) {
-    .fails, .steps { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
     .cases { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
-    .fails, .steps { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
     .offer__stats { grid-template-columns: 1fr; }
   }
 </style>
@@ -223,13 +246,32 @@
     <span class="eyebrow" data-reveal>The problem</span>
     <h2 class="prob__head" data-reveal>You are not short of ideas. You are short of time to bring them to life.</h2>
     <p class="lead" style="max-width:60ch;margin-top:var(--space-6);" data-reveal>You have the ability, the network and the resources. What you do not have is a spare three months to write the plan, set up systems, find suppliers, hire the team and get a new thing off the ground on top of running the business you already have.</p>
-    <p class="muted" style="font-size:var(--text-lg);margin-top:var(--space-5);max-width:52ch;" data-reveal>So the idea sits there. It has been sitting there for a while. The usual options do not fit:</p>
+    <p class="muted" style="font-size:var(--text-lg);margin-top:var(--space-5);max-width:52ch;" data-reveal>So the idea sits there. It has been sitting there for a while.</p>
 
-    <div class="fails">
-      <div class="fail" data-reveal><div class="fail__x">[ consultant ]</div><h4>Hands you a document</h4><p>They describe it, then move on. You wanted it done, not described.</p></div>
-      <div class="fail" data-reveal><div class="fail__x">[ agency ]</div><h4>Needs constant direction</h4><p>You do not have the hours to manage them on top of everything else.</p></div>
-      <div class="fail" data-reveal><div class="fail__x">[ co-founder ]</div><h4>Wants equity and a say</h4><p>In a business you intend to own outright. A stake you did not want to give.</p></div>
-      <div class="fail" data-reveal><div class="fail__x">[ freelancer ]</div><h4>Lacks the seniority</h4><p>Not senior enough to make the calls you would make yourself.</p></div>
+    <div class="notfit" data-reveal>
+      <h3 class="notfit__head">Why the usual options fall short</h3>
+      <div class="notfit__grid">
+        <div class="notfit__item">
+          <div class="notfit__tag"><span class="notfit__x">&times;</span> [ consultants ]</div>
+          <h4>Hand you a document</h4>
+          <p>They describe it, then move on. You wanted it done, not described.</p>
+        </div>
+        <div class="notfit__item">
+          <div class="notfit__tag"><span class="notfit__x">&times;</span> [ agencies ]</div>
+          <h4>Need constant direction</h4>
+          <p>You do not have the hours to manage them on top of everything else.</p>
+        </div>
+        <div class="notfit__item">
+          <div class="notfit__tag"><span class="notfit__x">&times;</span> [ co-founders ]</div>
+          <h4>Want equity and a say</h4>
+          <p>In a business you intend to own outright. A stake you did not want to give.</p>
+        </div>
+        <div class="notfit__item">
+          <div class="notfit__tag"><span class="notfit__x">&times;</span> [ freelancers ]</div>
+          <h4>Lack the seniority</h4>
+          <p>Not senior enough to make the calls you would make yourself.</p>
+        </div>
+      </div>
     </div>
 
     <div class="prob__quote">

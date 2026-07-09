@@ -2,7 +2,7 @@
    Ukuva: personal executive activation
    Light editorial re-skin of a proven nav/component chassis.
    Brand: deep blue #006FA3 + orange #FF5C1E (from the elephant wordmark).
-   Type: Schibsted Grotesk (sans) · Newsreader (serif) · IBM Plex Mono (labels)
+   Type: Schibsted Grotesk (sans) · IBM Plex Mono (labels). No serif.
    ========================================================================== */
 
 :root {
@@ -28,7 +28,6 @@
 
     /* --- TYPE --- */
     --font-sans:  'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
-    --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
     --font-mono:  'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 
     --text-xs:   0.75rem;
@@ -114,8 +113,9 @@ strong { font-weight: 600; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 /* Serif accent */
-.serif { font-family: var(--font-serif); }
-.serif-italic { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+/* Emphasis is sans, non-italic: signalled with brand orange + weight, not a serif italic */
+.serif { font-family: var(--font-sans); }
+.serif-italic { font-family: var(--font-sans); font-style: normal; color: var(--accent); font-weight: 600; }
 
 /* --- HEADER --- */
 .site-header {
@@ -241,8 +241,8 @@ strong { font-weight: 600; }
 .case .outcome { margin-top: auto; padding-top: var(--space-5); border-top: 1px solid var(--border-soft); font-weight: 600; color: var(--ink); }
 
 /* --- PULL QUOTE --- */
-.pull-quote { font-family: var(--font-serif); font-weight: 400; font-size: clamp(1.7rem, 3.6vw, var(--text-4xl)); line-height: 1.22; letter-spacing: -0.015em; color: var(--ink); }
-.pull-quote em { font-style: italic; color: var(--accent); }
+.pull-quote { font-family: var(--font-sans); font-weight: 500; font-size: clamp(1.7rem, 3.6vw, var(--text-4xl)); line-height: 1.22; letter-spacing: -0.015em; color: var(--ink); }
+.pull-quote em { font-style: normal; color: var(--accent); font-weight: 600; }
 
 /* --- STICKY SECTION SUB-NAV --- */
 .sub-nav { border-bottom: 1px solid var(--border-soft); }

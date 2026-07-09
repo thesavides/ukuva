@@ -9,7 +9,7 @@
 ## Brand
 - Logo: "ukuva" wordmark where the orange "a" doubles as an elephant head (biggest ears in Africa). Assets in `assets/` (`ukuva_wordmark.svg`, `ukuva_mark.svg`, `ukuva_wordmark_white.svg`).
 - Palette: deep blue `#006FA3`, orange `#FF5C1E` (CTAs/accent), neutral gray `#A1A2A5`. Light/editorial theme on warm paper.
-- Type: Schibsted Grotesk (headings/body), Newsreader italic (pull-quotes / isiXhosa definition), IBM Plex Mono (eyebrows, pricing, tags).
+- Type: Schibsted Grotesk (headings/body, incl. pull-quotes), IBM Plex Mono (eyebrows, pricing, tags). **No serif font** (Newsreader removed); italic emphasis is replaced with brand orange (#FF5C1E) or font-weight.
 - Positioning (revised July 2026, from the "It's a Shovel" content deck): the **general contractor for your new venture**, an "idea to launch partner". Chris **plans and orchestrates** the launch of a new venture (works out what it takes, costs it, then assembles and runs the team/suppliers who build it). He does **NOT build in-house** (not a developer, not a COO, not a co-founder, not a consultant who just hands over a report). Sector-agnostic, with payments/fintech as credibility. Tagline "Listen. Then do." (ukuva = "to listen" in isiXhosa). Founder: Christopher Savides, Amsterdam. Email chris@ukuva.com.
 
 ## Engagement model (four steps)
