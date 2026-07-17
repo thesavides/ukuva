@@ -23,7 +23,9 @@
 ## Files & structure
 - Live site lives in `public/` (Cloudflare Worker Static Assets). Pages: `index.html` (home), `the-ukuva-plan.html`, `about.html` (Person schema), `faq.html` (FAQPage schema), `book.html` (Calendly inline embed), plus `privacy.html`, `terms.html`, `404.html`. Shared `public/assets/ukuva.css` + `public/assets/ukuva.js`.
 - Nav/IA: The Ukuva Plan, About, FAQ, and a "Book a call" CTA that goes to `/book` (the single conversion point). The old `approach.html` is **retired**: `public/_redirects` 301s `/approach` → `/the-ukuva-plan`.
-- SEO/AEO/GEO layer per the deck: per-page meta, JSON-LD (ProfessionalService on home, Person on about, FAQPage on home+faq, BreadcrumbList on inner pages), `robots.txt` allows AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended), `sitemap.xml`.
+- SEO/AEO/GEO layer per the deck: per-page meta, JSON-LD (ProfessionalService on home, Person on about, FAQPage on home+faq, BreadcrumbList on inner pages), `robots.txt` allows AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Google-Extended), `sitemap.xml`. Person/ProfessionalService carry `sameAs` (LinkedIn). FAQ questions are wrapped in `<h3 class="faq__qh">` for AEO. About/FAQ carry a visible "Last updated" date.
+- Analytics: **Google Analytics 4** (`gtag.js`, id `G-M32KLLTR1R`) on every page, disclosed in `privacy.html`. NOTE: no cookie-consent banner yet, GA cookies in the EU generally need prior consent (Consent Mode / banner is a to-do).
+- Portrait: `public/assets/chris-savides.jpg` used via plain `<img>` (alt set) on home + about; the old `image-slot` component is retired there.
 - Social card: `public/assets/og-image-v2.png` (source `design/og-image.svg`), mirrors the home hero.
 - `design/`: explorations + og-image source, not deployed. `docs/`: briefs + brand source, not deployed.
 - Hosting: Cloudflare **Worker** with Static Assets (NOT Pages), Git-connected, deploy command `npx wrangler deploy`, assets dir `public` via `[assets]` in `wrangler.toml`. No build step, no Worker script. See `README.md`.

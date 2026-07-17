@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M32KLLTR1R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M32KLLTR1R');
+</script>
+<meta name="theme-color" content="#FCFAF6">
 <title>Ukuva | Your idea to launch partner</title>
 <meta name="description" content="You have the idea but no time to build it. I work out exactly what it takes, then assemble and run the team that makes it real. Fixed fee, no equity.">
 <link rel="canonical" href="https://ukuva.com/">
@@ -12,6 +21,8 @@
 <meta property="og:title" content="Ukuva | Your idea to launch partner">
 <meta property="og:description" content="You have the idea but no time to build it. I work out exactly what it takes, then assemble and run the team that makes it real. Fixed fee, no equity.">
 <meta property="og:image" content="https://ukuva.com/assets/og-image-v2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ukuva | Your idea to launch partner">
 <meta name="twitter:description" content="You have the idea but no time to build it. I work out exactly what it takes, then assemble and run the team that makes it real. Fixed fee, no equity.">
@@ -21,7 +32,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/ukuva.css?v=2">
-<script src="assets/image-slot.js?v=2"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +44,10 @@
   "areaServed": "Worldwide",
   "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" },
   "slogan": "Listen. Then do.",
-  "priceRange": "From EUR 3,000"
+  "priceRange": "From EUR 3,000",
+  "logo": "https://ukuva.com/assets/ukuva_mark.svg",
+  "image": "https://ukuva.com/assets/og-image-v2.png",
+  "sameAs": ["https://www.linkedin.com/in/chris-savides-ukuva"]
 }
 </script>
 <script type="application/ld+json">
@@ -129,7 +142,7 @@
   /* ---- WHY ME / PROOF ---- */
   .why { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: var(--space-16); align-items: start; }
   .why__photo .frame { aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-deep); }
-  .why__photo image-slot { width: 100%; height: 100%; }
+  .why__photo .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .why__cap { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin-top: var(--space-4); }
   .edges { display: flex; flex-direction: column; gap: var(--space-6); margin-top: var(--space-10); }
   .edge { display: grid; grid-template-columns: auto 1fr; gap: var(--space-5); align-items: start; }
@@ -195,7 +208,7 @@
         <span class="nav__item"><a class="nav__link" href="/faq">FAQ</a></span>
       </div>
       <div class="nav__utils">
-        <a class="lang" href="#" aria-label="Language">EN</a>
+        <span class="lang" aria-label="Language">EN</span>
         <a class="btn btn--primary btn--sm" href="/book">Book a call</a>
       </div>
     </nav>
@@ -366,7 +379,7 @@
   <div class="wrap why">
     <div class="why__photo" data-reveal>
       <div class="frame">
-        <image-slot id="chris-portrait" shape="rect" fit="cover" src="assets/chris-savides.jpg" placeholder="Christopher Savides, founder of Ukuva, Amsterdam"></image-slot>
+        <img src="assets/chris-savides.jpg" alt="Christopher Savides, founder of Ukuva, Amsterdam" loading="lazy" width="842" height="1264">
       </div>
       <div class="why__cap">Christopher Savides &middot; Founder, Ukuva</div>
     </div>
@@ -459,23 +472,23 @@
       </div>
       <div class="faq">
         <div class="faq__item open">
-          <button class="faq__q" aria-expanded="true">I have an idea but no time to build it. What can you actually do? <span class="pm" aria-hidden="true"></span></button>
+          <h3 class="faq__qh"><button class="faq__q" aria-expanded="true">I have an idea but no time to build it. What can you actually do? <span class="pm" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div class="faq__a-inner">I turn the idea into a clear, costed plan, then assemble and run the team and suppliers who build it. You stay as involved as you want to be. Think of me as the general contractor for your new venture: you own it, I make it happen.</div></div>
         </div>
         <div class="faq__item">
-          <button class="faq__q" aria-expanded="false">Do you build the product or write the code yourself? <span class="pm" aria-hidden="true"></span></button>
+          <h3 class="faq__qh"><button class="faq__q" aria-expanded="false">Do you build the product or write the code yourself? <span class="pm" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div class="faq__a-inner">No. I plan the venture and orchestrate the people who build it, using my network. I am not a developer and I do not build in-house. That is deliberate: it keeps me focused on getting the whole thing shipped rather than one part of it.</div></div>
         </div>
         <div class="faq__item">
-          <button class="faq__q" aria-expanded="false">How is this different from a co-founder or a consultant? <span class="pm" aria-hidden="true"></span></button>
+          <h3 class="faq__qh"><button class="faq__q" aria-expanded="false">How is this different from a co-founder or a consultant? <span class="pm" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div class="faq__a-inner">A co-founder takes equity and shares control. A consultant hands over advice and leaves. I do neither. I work on a fixed fee, I take no stake, and I stay accountable for delivery until the venture is real, then the engagement ends.</div></div>
         </div>
         <div class="faq__item">
-          <button class="faq__q" aria-expanded="false">How much does it work out to? <span class="pm" aria-hidden="true"></span></button>
+          <h3 class="faq__qh"><button class="faq__q" aria-expanded="false">How much does it work out to? <span class="pm" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div class="faq__a-inner">The planning phase, The Ukuva Plan, is a fixed fee of EUR 3,000 to EUR 5,000, split half up front and half on completion. You get a firm number before any work starts. Execution, if you want it, is quoted separately once the plan is set.</div></div>
         </div>
         <div class="faq__item">
-          <button class="faq__q" aria-expanded="false">Do you only work on fintech or payments ideas? <span class="pm" aria-hidden="true"></span></button>
+          <h3 class="faq__qh"><button class="faq__q" aria-expanded="false">Do you only work on fintech or payments ideas? <span class="pm" aria-hidden="true"></span></button></h3>
           <div class="faq__a"><div class="faq__a-inner">No. My background is in payments and fintech, which is where a lot of my proof comes from, but the work is sector-agnostic. What I bring is the discipline of shipping hard things and a network to build them, whatever the industry.</div></div>
         </div>
       </div>

@@ -3,8 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M32KLLTR1R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M32KLLTR1R');
+</script>
+<meta name="theme-color" content="#FCFAF6">
 <title>About Christopher Savides | Ukuva, Amsterdam</title>
-<meta name="description" content="Christopher Savides is the founder of Ukuva. Twenty years shipping hard things in payments, fintech and cross-border markets. Now he plans and builds new ventures for busy founders.">
+<meta name="description" content="Christopher Savides, founder of Ukuva in Amsterdam. Twenty years shipping hard things in payments, fintech and cross-border markets, now planning new ventures.">
 <link rel="canonical" href="https://ukuva.com/about">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="profile">
@@ -13,6 +22,8 @@
 <meta property="og:title" content="About Christopher Savides | Ukuva, Amsterdam">
 <meta property="og:description" content="Twenty years shipping hard things in payments, fintech and cross-border markets. Now planning and building new ventures for busy founders.">
 <meta property="og:image" content="https://ukuva.com/assets/og-image-v2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://ukuva.com/assets/og-image-v2.png">
 <link rel="icon" href="assets/ukuva_mark.svg">
@@ -20,7 +31,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/ukuva.css?v=2">
-<script src="assets/image-slot.js?v=2"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +41,9 @@
   "url": "https://ukuva.com/about",
   "email": "chris@ukuva.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Amsterdam", "addressCountry": "NL" },
-  "knowsAbout": [ "Venture launch planning", "Cross-border payments", "Fintech operations", "Market entry", "Post-acquisition integration" ]
+  "knowsAbout": [ "Venture launch planning", "Cross-border payments", "Fintech operations", "Market entry", "Post-acquisition integration" ],
+  "image": "https://ukuva.com/assets/chris-savides.jpg",
+  "sameAs": ["https://www.linkedin.com/in/chris-savides-ukuva"]
 }
 </script>
 <script type="application/ld+json">
@@ -43,7 +55,7 @@
   .page { padding-top: calc(var(--header-h) + var(--space-12)); padding-bottom: var(--space-16); }
   .about-head { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-16); align-items: start; }
   .about-head__photo .frame { aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-deep); }
-  .about-head__photo image-slot { width: 100%; height: 100%; }
+  .about-head__photo .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .about-head__cap { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); margin-top: var(--space-4); }
   .breadcrumb { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: var(--space-6); }
   .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
@@ -71,7 +83,7 @@
         <span class="nav__item"><a class="nav__link" href="/faq">FAQ</a></span>
       </div>
       <div class="nav__utils">
-        <a class="lang" href="#" aria-label="Language">EN</a>
+        <span class="lang" aria-label="Language">EN</span>
         <a class="btn btn--primary btn--sm" href="/book">Book a call</a>
       </div>
     </nav>
@@ -92,7 +104,7 @@
     <div class="about-head">
       <div class="about-head__photo">
         <div class="frame">
-          <image-slot id="chris-portrait" shape="rect" fit="cover" src="assets/chris-savides.jpg" placeholder="Christopher Savides, founder of Ukuva, Amsterdam"></image-slot>
+          <img src="assets/chris-savides.jpg" alt="Christopher Savides, founder of Ukuva, Amsterdam" width="842" height="1264">
         </div>
         <div class="about-head__cap">Christopher Savides &middot; Founder, Ukuva &middot; Amsterdam</div>
       </div>
@@ -116,6 +128,7 @@
       <p>Plainly, and in person where it counts. I listen first, properly, because the plan is only as good as how well I understood the idea. Then I do. That is the whole thing.</p>
       <p class="sign">Listen. Then do.</p>
     </div>
+    <p style="font-family:var(--font-mono);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-top:var(--space-12);">Last updated 9 July 2026</p>
 
     <div class="page__cta">
       <a class="btn btn--primary btn--lg" href="/book">Book a free 30-minute call</a>

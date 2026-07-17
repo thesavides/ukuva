@@ -286,6 +286,7 @@ strong { font-weight: 600; }
 
 /* --- FAQ ACCORDION --- */
 .faq { border-top: 1px solid var(--border-soft); }
+.faq__qh { margin: 0; font: inherit; }
 .faq__item { border-bottom: 1px solid var(--border-soft); }
 .faq__q { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); width: 100%; padding: var(--space-6) 0; background: none; border: 0; cursor: pointer; text-align: left; font-family: var(--font-sans); font-size: var(--text-lg); font-weight: 600; color: var(--ink); }
 .faq__q .pm { flex: 0 0 auto; width: 26px; height: 26px; position: relative; }
