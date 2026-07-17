@@ -112,6 +112,13 @@ strong { font-weight: 600; }
 /* Visually hidden, still available to screen readers / SEO */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
+/* Cookie consent banner */
+.consent { position: fixed; left: var(--space-4); right: var(--space-4); bottom: var(--space-4); z-index: 300; max-width: 760px; margin-inline: auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: 0 14px 44px -14px rgba(20,34,44,.32); padding: var(--space-5) var(--space-6); display: flex; align-items: center; gap: var(--space-5); flex-wrap: wrap; transform: translateY(160%); transition: transform 340ms cubic-bezier(.2,.7,.2,1); }
+.consent.is-in { transform: translateY(0); }
+.consent__text { flex: 1 1 320px; margin: 0; font-size: var(--text-sm); color: var(--ink-2); }
+.consent__text a { color: var(--blue); }
+.consent__actions { display: flex; gap: var(--space-3); flex-shrink: 0; }
+
 /* Serif accent */
 /* Emphasis is sans, non-italic: signalled with brand orange + weight, not a serif italic */
 .serif { font-family: var(--font-sans); }
