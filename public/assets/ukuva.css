@@ -167,8 +167,6 @@ strong { font-weight: 600; }
 .dropdown a .dd-d { display: block; font-size: var(--text-xs); color: var(--ink-muted); margin-top: 2px; }
 
 .nav__utils { display: flex; align-items: center; gap: var(--space-3); margin-left: var(--space-3); }
-.lang { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: .12em; color: var(--ink-muted); padding: 0.4rem 0.5rem; border-radius: var(--radius-sm); text-decoration: none; }
-.lang:hover { color: var(--ink); }
 
 /* --- BUTTONS --- */
 .btn {
