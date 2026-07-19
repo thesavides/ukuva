@@ -108,6 +108,8 @@ strong { font-weight: 600; }
 .eyebrow::before { display: none; }
 .eyebrow--plain::before { display: none; }
 .eyebrow--accent { color: var(--accent); }
+/* Payoff line "Listen. Then do." must never wrap */
+.payoff { white-space: nowrap; }
 .band-deep .eyebrow { color: var(--on-deep-muted); }
 /* Visually hidden, still available to screen readers / SEO */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
