@@ -15,7 +15,7 @@
 ## Engagement model (four steps)
 1. Free 30-min discovery call.
 2. A short scoping document (confirms we are building the same thing).
-3. **The Ukuva Plan** (the productised, named deliverable, replaces the old "Operational Readiness Blueprint"): a fixed-fee planning engagement, **EUR 3,000 to EUR 5,000, half up front and half on completion**. Turns the idea into a clear, costed, executable plan. The client keeps it.
+3. **The Ukuva Plan** (the productised, named deliverable, replaces the old "Operational Readiness Blueprint"): a fixed-fee planning engagement, **quoted per engagement to the client's requirements, half up front and half on completion**. Turns the idea into a clear, costed, executable plan. The client keeps it.
 4. Optional execution: quoted per engagement; Chris assembles and runs the team/suppliers.
 - No equity, ever. Remote-first from Amsterdam, travel when needed. A small number of clients at a time (no longer phrased as "max 3").
 - All paid work is subject to a separate, per-client **signed consulting services agreement** (B2B contractor arrangement between Ukuva Consulting B.V. and the client, Netherlands law, advisory role, NAI arbitration in Amsterdam). It governs each engagement and takes precedence over the website; `public/terms.html` references this. Chris prepares a fresh engagement doc per client (general terms consistent). Reference draft: `docs/` (Abound consulting agreement).
